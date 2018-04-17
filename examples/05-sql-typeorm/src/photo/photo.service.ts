@@ -13,4 +13,7 @@ export class PhotoService {
   async findAll(): Promise<Photo[]> {
     return await this.photoRepository.find();
   }
+  async create(Photo:Photo){
+      return await this.photoRepository.save(Photo);
+  }
 }
